@@ -1,8 +1,7 @@
 package main
 
 import "container/list"
-import "fmt"
-
+const CACHE_SIZE int = 3
 type Key interface{}
 
 type entry struct {
@@ -50,7 +49,6 @@ func (c *Cache) Get(key Key) (value int) {
 	return
 
 }
-// old list last one
 func (c *Cache) RemoveOld() {
 	if c.cache == nil {
 		return
@@ -66,19 +64,6 @@ func (c *Cache) removeElement(e *list.Element) {
 	delete(c.cache, kv.key)
 }
 
-func main() {
-
-	ele := New(100)
-	ele.Set("demo", 100)
-	ele.Set("demos", 101)
-	ele.Set("dem",102)
-	fmt.Println(ele.Get("demo"))
-	fmt.Println(ele.Get("demos"))
-	fmt.Println(ele.Get("dem"))
-	ele.Set("demo",103)
-	fmt.Println(ele.Get("demo"))
-
-}
 
 
 

@@ -1,6 +1,6 @@
 package main
 
-func countIslands(grid [][]int) int{
+func CountIslands(grid [][]int) int{
 	 var count, row,col int
 	if len(grid) == 0 {
 		return 0
