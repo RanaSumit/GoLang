@@ -1,6 +1,23 @@
 package main
 
-import "container/list"
+import ("container/list"
+	"fmt"
+)
+func main(){
+	l := New(CACHE_SIZE)
+	l.Set(1, 10)
+	l.Set(2, 20)
+	l.Set(3, 30)
+
+	 fmt.Println(l.Get(1))
+	fmt.Println(l.Get(2))
+	l.Get(3)
+
+	l.Set(4, 40)
+	fmt.Println(l.Get(4))
+	// Checks Cache Invalidation
+	fmt.Println(l.Get(1))
+}
 const CACHE_SIZE int = 3
 type Key interface{}
 
