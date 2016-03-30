@@ -113,3 +113,12 @@ Date: Mon, 29 Feb 2016 19:55:15 GMT
 ....
 ``` 
 ---
+### Install dependency ([Routes])
+```sh
+go get github.com/drone/routes
+```
+### Usage
+
+go run app.go
+
+Now, open this URL (http://localhost:3000/profile/foo@gmail.com) in a web browser! 
