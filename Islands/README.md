@@ -16,3 +16,8 @@ Example 2:
 00011
 Answer: 3
 ```
+### Usage
+
+``` sh
+go test countislands_test.go countislands.go
+```
